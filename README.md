@@ -5,7 +5,7 @@ This will bypass Cross-Origin Resource Sharing block policy in PHP Javascript we
 
 ###Install
 Move the get.php to somewhere publically-accessible on your server.
-This depends on cURL. If you do not have cURL installed, enter this on Linux server:
+This file requires cURL. If you do not have cURL installed, enter this on Linux server:
 ```sudo apt-get install php5-curl && sudo service apache2 restart```
 
 ###Use
