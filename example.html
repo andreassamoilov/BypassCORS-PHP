@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title><%- title %></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function($) {
+
+	$("#urlname").val( "http://www.google.com" );
+
+	$("#submit").click(function(){
+		var url = $("#urlname").val();
+		$.get("get.php/"+url, function(data){
+			$("#output").html(data);
+
+		})
+	})
+	
+});
+
+</script>
+
+</head>
+<body>
+
+<input id="urlname" type='text'> <input id="submit" type='submit'>
+
+<div id="output"></div>
+
+</body>
+</html>
