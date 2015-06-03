@@ -10,6 +10,7 @@ function getURL($url){
 	$domain = substr($url, 0, strpos($url."/","/",8));
 	$curl = curl_init();
 	curl_setopt($curl, CURLOPT_URL, $url);
+	curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 	curl_setopt($curl, CURLOPT_HTTPHEADER, array(
 		"Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7",
